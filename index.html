@@ -1,0 +1,120 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - URL Security Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-shield-alt logo-icon"></i>
+                <span class="logo-text">SafeClick</span>
+            </div>
+            <nav>
+                <button id="faqButton" class="faq-button">FAQ</button>
+            </nav>
+        </header>
+
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <div class="hero">
+                <h1>Protect Yourself from Phishing Attacks</h1>
+                <p>Our advanced AI-powered system analyzes URLs in real-time to detect potential phishing threats.</p>
+                <button id="getStarted">Start Scanning</button>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <i class="fas fa-bolt feature-icon"></i>
+                    <h3>Real-time Detection</h3>
+                    <p>Advanced ML model analyzes URLs instantly for phishing threats</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-search feature-icon"></i>
+                    <h3>Deep URL Analysis</h3>
+                    <p>Examines URL structure, domain age, and suspicious patterns</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt feature-icon"></i>
+                    <h3>Comprehensive Protection</h3>
+                    <p>Detects various phishing techniques and malicious patterns</p>
+                </div>
+            </div>
+
+            <div class="how-it-works">
+                <h2>How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Enter URL</h3>
+                        <p>Paste any suspicious URL you want to analyze</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Deep Analysis</h3>
+                        <p>Our AI model examines multiple security features</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Get Results</h3>
+                        <p>Receive instant feedback on potential threats</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Page -->
+        <div id="input" class="page">
+            <i class="fas fa-search page-icon"></i>
+            <h1>URL Scanner</h1>
+            <p>Enter a URL to check if it's potentially dangerous</p>
+            <div class="input-container">
+                <input type="text" id="urlInput" placeholder="Enter URL here">
+                <button id="scanButton">Scan</button>
+            </div>
+            <button class="back-link" onclick="showPage('home')">Back to Home</button>
+        </div>
+
+        <!-- Output Page -->
+        <div id="output" class="page">
+            <i class="fas fa-chart-bar page-icon"></i>
+            <h1>Scan Results</h1>
+            <div id="urlDisplay"></div>
+            <div id="result"></div>
+            <div class="button-group">
+                <button id="scanAgain">Scan Another URL</button>
+                <button class="back-link" onclick="showPage('home')">Back to Home</button>
+            </div>
+        </div>
+
+        <!-- FAQ Page -->
+        <div id="faq" class="page">
+            <button id="backButton" class="back-button">Back</button>
+            <i class="fas fa-question-circle page-icon"></i>
+            <h1>Frequently Asked Questions</h1>
+            <div class="faq-content">
+                <div class="faq-item">
+                    <h2>What is phishing?</h2>
+                    <p>Phishing is a cybercrime where attackers impersonate legitimate institutions to steal sensitive information. They often use deceptive URLs that look similar to genuine websites.</p>
+                </div>
+                <div class="faq-item">
+                    <h2>How does the detection work?</h2>
+                    <p>Our system uses machine learning to analyze various URL characteristics including length, entropy, special characters, domain age, and other patterns commonly associated with phishing attempts.</p>
+                </div>
+                <div class="faq-item">
+                    <h2>How accurate is the detection?</h2>
+                    <p>Our model provides a confidence score with each prediction. While highly accurate, we recommend using it as part of a broader security approach and always exercising caution with suspicious URLs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
